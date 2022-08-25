@@ -9,6 +9,7 @@
 5) Mejorar componente Detalles.
 6) Agregar animaciones.
 7) Mejorar estilos.
+8) Mejora tipado (quitar any).
 -->
 
 <!--
