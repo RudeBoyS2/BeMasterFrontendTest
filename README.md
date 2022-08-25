@@ -4,8 +4,11 @@
 <!--
 1) Agregar Auth y validación del form con Formik y Yup.
 2) Agregar rutas protegidas.
-3) Agregar animaciones.
-4) Mejorar estilos.
+3) Agregar comentarios.
+4) Agregar searchbar.
+5) Mejorar componente Detalles.
+6) Agregar animaciones.
+7) Mejorar estilos.
 -->
 
 <!--
