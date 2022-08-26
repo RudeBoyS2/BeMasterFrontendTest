@@ -1,6 +1,6 @@
 import { Box, Heading, Image, Link as ChakraLink } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface Props {
   src: string;
@@ -11,10 +11,6 @@ interface Props {
 
 const CategoryCard = ({ src, video, title, href }: Props) => {
   const [isHovering, setIsHovering] = useState(false);
-
-  useEffect(() => {
-    console.log(title);
-  }, [title]);
 
   return (
     <ChakraLink

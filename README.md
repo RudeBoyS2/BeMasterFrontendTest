@@ -2,7 +2,7 @@
 
 <!-- Cosas que se pueden mejorar, pero no me alcanzó el tiempo: -->
 <!--
-1) Agregar Auth y validación del form con Formik y Yup.
+1) Agregar Auth.
 2) Agregar rutas protegidas.
 3) Agregar comentarios.
 4) Agregar searchbar.
