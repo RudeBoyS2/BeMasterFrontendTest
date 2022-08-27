@@ -1,6 +1,7 @@
 # BeMaster Frontend Test
 
 Test project for BeMaster. This project consists in a disney plus like application.
+https://bemastertest.netlify.app/
 
 ## What does the app includes?
 
