@@ -187,6 +187,7 @@ const Navbar = () => {
           onClick={handleMenuClick}
         />
       </Stack>
+      {/* @ts-expect-error */}
       <Collapse in={display}>
         <Hide above="md">
           <Flex
