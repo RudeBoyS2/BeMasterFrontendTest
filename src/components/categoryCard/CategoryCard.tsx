@@ -17,8 +17,9 @@ const CategoryCard = ({ src, video, title, href }: Props) => {
       as={Link}
       position="relative"
       mt="25px"
-      w="222px"
       h="125px"
+      w="222px"
+      mb="7px"
       boxShadow="rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
@@ -35,9 +36,15 @@ const CategoryCard = ({ src, video, title, href }: Props) => {
         loop={true}
         muted={true}
       >
-        <source src={video} type="video/mp4" />
+        <source src={video} type="video/webm" />
       </video>
-      <Image w="100%" h="100%" objectFit="cover" src={src} />
+      <Image
+        w="100%"
+        h="100%"
+        objectFit="cover"
+        src={src}
+        display={!isHovering ? "block" : "none"}
+      />
       <Box
         position="absolute"
         w="100%"

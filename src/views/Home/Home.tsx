@@ -15,7 +15,7 @@ const Home = () => {
           px="50px"
           mt="40px"
           gap={8}
-          flexWrap={{ base: "wrap", md: "nowrap" }}
+          flexWrap={{ base: "wrap", lg: "nowrap" }}
           align="center"
           justify="center"
         >

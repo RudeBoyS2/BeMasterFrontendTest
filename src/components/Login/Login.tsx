@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const LOGIN_API_URL = import.meta.env.VITE_LOGIN_API_URL;
 
@@ -30,7 +30,6 @@ const Login = () => {
 
   const onSubmit = async (e: any) => {
     e.preventDefault();
-    const { username, password } = values;
     try {
       const response: any = await axios.get(LOGIN_API_URL, {
         headers: {
@@ -39,7 +38,7 @@ const Login = () => {
       });
       console.log(response);
       if (response.status === 200) {
-        localStorage.setItem("token", response?.result?.token);
+        localStorage.setItem("token", response?.data?.token);
         navigate("/", { replace: true });
       } else {
         alert();
@@ -54,6 +53,8 @@ const Login = () => {
   const formik = useFormik({ initialValues, validationSchema, onSubmit });
   const { handleSubmit, handleChange, handleBlur, values, errors, touched } =
     formik;
+
+  if (localStorage.getItem("token")) return <Navigate to="/" />;
 
   return (
     <Container maxW="100vw" minH="100vh" display="flex">
