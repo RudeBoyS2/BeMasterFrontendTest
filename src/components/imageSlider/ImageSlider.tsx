@@ -16,13 +16,31 @@ const ImageSlider = () => {
   return (
     <Box as={Slider} mt="20px" mx="50px" {...settings}>
       <Box h="300px">
-        <Image src="assets/slider1.jpg" h="300px" w="100%" borderRadius="4px" />
+        <Image
+          src="assets/slider1.jpg"
+          h="300px"
+          w="100%"
+          borderRadius="4px"
+          objectFit="cover"
+        />
       </Box>
       <Box h="300px">
-        <Image src="assets/slider2.jpg" h="300px" w="100%" borderRadius="4px" />
+        <Image
+          src="assets/slider2.jpg"
+          h="300px"
+          w="100%"
+          borderRadius="4px"
+          objectFit="cover"
+        />
       </Box>
       <Box h="300px">
-        <Image src="assets/slider3.jpg" h="300px" w="100%" borderRadius="4px" />
+        <Image
+          src="assets/slider3.jpg"
+          h="300px"
+          w="100%"
+          borderRadius="4px"
+          objectFit="cover"
+        />
       </Box>
     </Box>
   );
