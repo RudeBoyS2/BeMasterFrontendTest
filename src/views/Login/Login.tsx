@@ -36,7 +36,6 @@ const Login = () => {
           "Content-Type": "application/json",
         },
       });
-      console.log(response);
       if (response.status === 200) {
         localStorage.setItem("token", response?.data?.token);
         navigate("/", { replace: true });
@@ -133,7 +132,6 @@ const Login = () => {
               )}
             </FormControl>
             <Button
-              onClick={onSubmit}
               type="submit"
               h="50px"
               bg="buttonBg"

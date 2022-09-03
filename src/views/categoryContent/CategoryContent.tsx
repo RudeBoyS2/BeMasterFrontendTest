@@ -11,10 +11,10 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { fetchMoviesByCategory } from "../../../utils/requests";
-import ContentCard from "../contentCard/ContentCard";
+import ContentCard from "../../components/contentCard/ContentCard";
 import type { Data } from "../../../utils/types";
-import ContentDetails from "../contentDetails/ContentDetails";
-import Navbar from "../Navbar/Navbar";
+import ContentDetails from "../../components/contentDetails/ContentDetails";
+import Navbar from "../../components/Navbar/Navbar";
 
 const CategoryContent = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();

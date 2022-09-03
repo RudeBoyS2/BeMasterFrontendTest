@@ -1,10 +1,10 @@
-import Navbar from "./components/Navbar/Navbar";
-import ContentCategory from "./components/categoryContent/CategoryContent";
+import ContentCategory from "./views/categoryContent/CategoryContent";
 import { Routes, Route } from "react-router-dom";
 import Home from "./views/Home/Home";
-import Login from "./components/Login/Login";
+import Login from "./views/Login/Login";
 import RequireAuth from "./RequireAuth/RequireAuth";
 import Layout from "./Layout/Layout";
+import CategoryContent from "./views/categoryContent/CategoryContent";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
 
         {/* Categories Route */}
         <Route element={<RequireAuth />}>
-          <Route path="/categories/:category" element={<ContentCategory />} />
+          <Route path="/categories/:category" element={<CategoryContent />} />
         </Route>
 
         {/* Missing Route */}
