@@ -29,7 +29,6 @@ const Login = () => {
   });
 
   const onSubmit = async (e: any) => {
-    e.preventDefault();
     try {
       const response: any = await axios.get(LOGIN_API_URL, {
         headers: {
