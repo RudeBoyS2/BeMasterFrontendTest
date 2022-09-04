@@ -49,8 +49,6 @@ const Login = () => {
   const { handleSubmit, handleChange, handleBlur, values, errors, touched } =
     formik;
 
-  if (localStorage.getItem("token")) return <Navigate to="/" />;
-
   return (
     <Container maxW="100vw" minH="100vh" display="flex" px={0}>
       <Flex
