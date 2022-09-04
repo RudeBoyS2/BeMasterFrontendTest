@@ -28,24 +28,21 @@ const Login = () => {
     password: Yup.string().required("Ingresa una contraseña"),
   });
 
-  const onSubmit = async (e: any) => {
-    try {
-      const response: any = await axios.get(LOGIN_API_URL, {
+  const onSubmit = () => {
+    axios
+      .get(LOGIN_API_URL, {
         headers: {
           "Content-Type": "application/json",
         },
+      })
+      .then((response) => {
+        if (response.status === 200) {
+          localStorage.setItem("token", response?.data?.token);
+          navigate("/", { replace: true });
+        } else {
+          alert();
+        }
       });
-      if (response.status === 200) {
-        localStorage.setItem("token", response?.data?.token);
-        navigate("/", { replace: true });
-      } else {
-        alert();
-      }
-    } catch (err: any) {
-      if (err.response.status === 401) {
-        alert(err);
-      }
-    }
   };
 
   const formik = useFormik({ initialValues, validationSchema, onSubmit });
@@ -55,7 +52,7 @@ const Login = () => {
   if (localStorage.getItem("token")) return <Navigate to="/" />;
 
   return (
-    <Container maxW="100vw" minH="100vh" display="flex">
+    <Container maxW="100vw" minH="100vh" display="flex" px={0}>
       <Flex
         justify="center"
         align="center"
