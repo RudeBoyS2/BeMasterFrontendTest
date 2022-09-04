@@ -28,21 +28,26 @@ const Login = () => {
     password: Yup.string().required("Ingresa una contraseña"),
   });
 
+  // const onSubmit = () => {
+  //   axios
+  //     .get(LOGIN_API_URL, {
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     })
+  //     .then((response) => {
+  //       if (response.status === 200) {
+  //         localStorage.setItem("token", response?.data?.token);
+  //         navigate("/", { replace: true });
+  //       } else {
+  //         alert();
+  //       }
+  //     });
+  // };
+
   const onSubmit = () => {
-    axios
-      .get(LOGIN_API_URL, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-      .then((response) => {
-        if (response.status === 200) {
-          localStorage.setItem("token", response?.data?.token);
-          navigate("/", { replace: true });
-        } else {
-          alert();
-        }
-      });
+    localStorage.setItem("token", "asdasd");
+    navigate("/", { replace: true });
   };
 
   const formik = useFormik({ initialValues, validationSchema, onSubmit });
